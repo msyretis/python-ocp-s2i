@@ -1,14 +1,13 @@
-#! /bin/python3
-# import time
-
-# while True:
-#     current_time = time.strftime("%H:%M:%S", time.localtime())
-#     print(current_time)
-#     time.sleep(1)
-
-
+import subprocess
 import requests
 import time
+
+# Create a virtual environment and activate it
+subprocess.run(["python3", "-m", "venv", "myenv"])
+subprocess.run(["source", "myenv/bin/activate"])
+
+# Install dependencies in the virtual environment
+subprocess.run(["pip", "install", "requests"])
 
 while True:
     # Make curl request to OpenAPI
